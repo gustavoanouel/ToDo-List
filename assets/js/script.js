@@ -15,6 +15,9 @@ const listContainer = document.getElementById("list");
 const inputText = document.getElementById("inputText");
 const addBtn = document.getElementById("addBtn");
 
+//contenedor resultado validacion negativa
+let resultNegative = document.getElementById("invalid-feedback");
+
 // Elemento para mostrar el contador de tareas
 const statsElement = document.getElementById("stats");
 
@@ -135,11 +138,16 @@ addBtn.addEventListener("click", function (event) {
   event.preventDefault();
   const taskText = inputText.value.trim();
   if (taskText === "") {
-    alert("Ingrese una tarea correctamente");
+    inputText.classList.add("is-invalid");
+
+    resultNegative.style.display = "block";
     inputText.value = "";
   } else {
     addTask(taskText);
     inputText.value = "";
+    inputText.classList.remove("is-invalid");
+
+    resultNegative.style.display = "none";
   }
 });
 

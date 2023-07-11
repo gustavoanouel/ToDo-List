@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100;400;500&display=swap");
-:root {
-  --orange: #d95550;
-  --lightOrange: #dd6662;
-  --veryLightOrange: #f89e8b;
+/* :root {
+  --orange: #f6f6f6;
+  --lightOrange: #983fa8;
+  --veryLightOrange: #545454;
   --gray: #55557b;
-  --white: #fff;
-}
+  --white: #983fa8;
+} */
 * {
   margin: 0;
   padding: 0;
@@ -17,12 +17,12 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: var(--orange);
+  background-color: #f6f6f6;
 }
 
 h1 {
   margin-top: 200px;
-  color: var(--white);
+  color: rgb(49, 49, 49);
   text-align: center;
 }
 
@@ -31,14 +31,16 @@ form {
   margin: 45px auto;
 }
 
-.input-text {
-  background-color: var(--orange);
-  color: var(--white);
-  border-style: none;
+#userInput {
+  display: flex;
+  margin-bottom: 0.8em;
 }
 
-.input-text::placeholder {
-  color: var(--veryLightOrange);
+.input-text {
+  background-color: #f6f6f6;
+  color: #7d7d7d;
+  border-style: none;
+  margin-right: 0.3em;
 }
 
 .input-text:focus {
@@ -46,18 +48,17 @@ form {
 }
 
 #addBtn {
-  font-size: 2em;
+  font-size: 1.5em;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   border-style: none;
-  color: var(--orange);
 }
 
 #addBtn:hover {
-  background-color: var(--veryLightOrange);
+  background-color: #7d7d7d;
   cursor: pointer;
-  color: var(--white);
+  color: #f6f6f6;
 }
 
 .list-container {
@@ -65,7 +66,7 @@ form {
   margin: 0 auto;
 }
 .task-container {
-  background-color: var(--white);
+  background-color: #eaeaea;
   display: flex;
   justify-content: space-between;
   margin-bottom: 6px;
@@ -73,12 +74,10 @@ form {
   border-radius: 4px;
   font-size: 1.1em;
   font-weight: 500;
-  color: var(--gray);
 }
 .delete-btn {
   font-size: 1em;
   border: none;
-  background-color: var(--white);
 }
 .delete-btn {
   cursor: pointer;
@@ -87,6 +86,9 @@ form {
 #stats {
   margin-top: 25px;
   font-size: 1.3em;
-  color: var(--veryLightOrange);
   text-align: center;
+}
+.invalid-feedback {
+  text-align: center;
+  margin-bottom: 0.5em;
 }
