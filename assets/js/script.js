@@ -1,5 +1,5 @@
 // Contador para generar IDs únicos
-let taskIdCounter = 0;
+let taskIdCounter = 1;
 
 // Tareas por defecto (como objetos)
 const defaultTasks = [
